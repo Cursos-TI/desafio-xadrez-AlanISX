@@ -1,29 +1,51 @@
 #include <stdio.h>
 
-    int main() {
-        int torre, bispo = 0, rainha = 0;
+int main()
+{
 
-    //For utilizado para limitar movimento da torre à 5 casas
+    /*Utilizei apenas a letra inicial para cada peça sendo assim
+    R = Rei, Rn = Rainha, B = Bispo, C = Cavalo, T = Torre e P = Peão */
+
+    int t, b = 0, rn = 0, c = 0;
+
+    // For utilizado para limitar movimento da torre à 5 casas
     printf("Movimento Torre: \n");
-    for (torre = 0; torre < 5; torre++) {
-    printf("Cima\n");
+    for (t = 0; t < 5; t++)
+    {
+        printf("Cima\n");
     }
 
-    //Limita o movimento à 8 casas
+    // Limita o movimento à 8 casas
     printf("\nMovimento Rainha: \n");
-    do{
+    do
+    {
         printf("Esquerda\n");
-        rainha++;
-    } while (rainha <8 );
+        rn++;
+    } while (rn < 8);
 
-    //Limita o movimento à 5 casas
+    // Limita o movimento à 5 casas
     printf("\nMovimento Bispo: \n");
-    while (bispo <= 5) {
+    while (b <= 5)
+    {
         printf("Cima Direita\n");
-        bispo++;
+        b++;
     }
 
+    // Declarando movimentação do cavalo, limitando-se à duas casas para cima e uma para a direita
+    for (int c = 0; c < 2; c++)
+    {
+        printf("\nMovimento Cavalo: \n");
 
+        do
+        {
+            printf("Cima\n");
+            c++;
+
+        } while (c < 2);
+        {
+            printf("Direita\n");
+        }
+    }
 
     return 0;
 }
